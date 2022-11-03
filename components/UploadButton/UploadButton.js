@@ -13,16 +13,16 @@ const UploadButton = () => {
 
   const parseFile =   (file) => {
     let fileName = file.name;
-    let newData = [];
+    
     Papa.parse(file, {
       header: true,
       complete: (results) => {
         let data = results.data;
         if(fileName === 'city-state-data-simplemaps.com.csv'){
          let parsedData = zipsToArray(data);
-          newData =  oneCityPerZip(parsedData);
+          data =  oneCityPerZip(parsedData);
       }
-        setData(newData)
+        setData(data)
         setLoading(false)
         //clear file input
         fileInput.current.value = '';
