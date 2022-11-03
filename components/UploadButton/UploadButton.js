@@ -21,7 +21,17 @@ const UploadButton = () => {
         if(fileName === 'city-state-data-simplemaps.com.csv'){
          let parsedData = zipsToArray(data);
           data =  oneCityPerZip(parsedData);
-      }
+        }
+        if(fileName === "us-cities-all.csv"){
+          let alt = []
+          data.map((item, index) => {
+            if(item.city_alt.length > 0){
+              alt.push(item.city_alt)
+            }
+            
+          })
+          console.log(alt.length)
+        }
         setData(data)
         setLoading(false)
         //clear file input
