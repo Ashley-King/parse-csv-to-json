@@ -1,0 +1,29 @@
+$dark: #3E4C59;
+$light-background: #F5F7FA;
+$button: #F364A2;
+$button-hover: #40C3F7;
+$light-text: #D8D8D8;
+
+$colors: (
+  dark: $dark,
+  light-background: $light-background,
+  button: $button,
+  button-hover: $button-hover,
+  light-text: $light-text
+);
+
+//return colors by key
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+
+//output all theme variables as css custom properties
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+ 
+}
+

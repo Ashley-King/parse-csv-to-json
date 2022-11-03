@@ -1,0 +1,21 @@
+.loading{
+  color: var(--button-hover);
+}
+.pre__header{
+  margin-top: 40px;
+}
+
+.pre{
+  background-color: var(--light-background);
+  border-radius: 5px;
+  color: var(--dark);
+  overflow: scroll;
+  max-width: 960px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  z-index:2;
+  
+}
