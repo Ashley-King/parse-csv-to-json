@@ -23,6 +23,7 @@ const UploadButton = () => {
           data =  oneCityPerZip(parsedData);
         }
         if(fileName === "us-cities-sanitized.csv"){
+          // this file has been sanitized to make sure that alt names are not represented in the city name column for the same state; biggest offenders are MO, PA and ME
           let altData = cityAltArray(data);
           data = [...data, ...altData];
           let parsedData = zipsToArray(data);
