@@ -22,7 +22,7 @@ const UploadButton = () => {
          let parsedData = zipsToArray(data);
           data =  oneCityPerZip(parsedData);
         }
-        if(fileName === "us-cities-all.csv"){
+        if(fileName === "us-cities-sanitized.csv"){
           let altData = cityAltArray(data);
           data = [...data, ...altData];
           let parsedData = zipsToArray(data);
